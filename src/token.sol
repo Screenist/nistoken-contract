@@ -32,8 +32,8 @@ contract Token is Owned {
             vestingAdmin = _vestingAdmin;
             freezeAdmin = _freezeAdmin;
             require( db.setAllowance(address(this), _owner, uint256(0)-1) );
-            require( db.mint(address(this), 1.5e16) );
-            emit Mint(address(this), 1.5e16);
+            require( db.mint(address(this), 1.55e16) );
+            emit Mint(address(this), 1.55e16);
         }
     }
     /* Fallback */
