@@ -1,5 +1,5 @@
 /*
-    tokenLib.sol v1.0.0
+    tokenLib.sol v1.0.1
     Token Library
     
     This file is part of Screenist [NIS] token project.
@@ -48,7 +48,7 @@ contract TokenLib is Token {
         _transfer(_from, _to, _amount);
         return true;
     }
-    function setVesting(address _beneficiary, uint256 _amount, uint256 _startBlock, uint256 _endBlock) public forOwner {
+    function setVesting(address _beneficiary, uint256 _amount, uint256 _startBlock, uint256 _endBlock) {
         require( _beneficiary != address(0x0000000000000000000000000000000000000000) );
         if ( _amount == 0 ) {
             _startBlock = 0;
